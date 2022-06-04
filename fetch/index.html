@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulaire inscription</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@vuepic/vue-datepicker@latest/dist/main.css">
+
+
+    <!-- Script -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+
+
+
+  
+  <body>
+    <!-- Point de montage-->
+    <div id="root">
+      
+        
+      
+
+      <div class="edit-inputs">
+        <form id="inscription">
+        <div class="Recherche">
+
+          <label for="Recherche">Recherche</label>
+          <input
+            id="Recherche"
+            class="Recherche"
+            v-model="Recherche"
+            
+          />
+         
+        </div>  
+       
+                 <input 
+            id="validation"
+            type="submit"
+          />
+        </div>
+        <button @click="Actus()" id ="change">change de couleur poste</button>
+      </form>
+
+        <ul>
+          <li v-for="result in results">
+            <p>{{result.strDrink}}</p>
+            
+            <p>{{result.strInstructions}} </p>
+            <p>{{result.Ingredient1}} </p>
+            <img :src="result.strDrinkThumb"/>
+          </li>
+        </ul>
+        
+ 
+        
+        
+       
+
+       
+      
+    </div>
+    
+  </body>
+</html>

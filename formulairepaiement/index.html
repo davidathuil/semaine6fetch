@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulaire inscription</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@vuepic/vue-datepicker@latest/dist/main.css">
+
+
+    <!-- Script -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+
+
+
+  
+  <body>
+    <!-- Point de montage-->
+    <div id="root">
+      
+        
+      
+
+      <div class="edit-inputs">
+        <form id="inscription" >   
+        <div class="CBInput">
+          <!-- @submit.prevent -->
+          <label for="CBInput">CB input</label>
+          <input
+            type="number"
+            v-model="CBInput"
+            :class="SringCBinputClass"
+            
+          />
+          <div>{{SringCBinputClass}}</div>
+          <!-- <div v-show="CBInput.length >8">CB OK </div> -->
+
+          
+          
+        </div>  
+        <div class="CVCInput">
+          <label for="CVCInput">CVC</label>
+          <input
+          type="number"
+          id="CVCInput"
+          v-model="CVCInput"
+          :class="SringCVCInputClass"
+            
+          />
+          <!-- <div v-if="CVCInput. ==3 ">CVCInput OK </div> -->
+          <div>{{SringCVCInputClass}}</div>
+        </div>
+
+        <div class="dateExpInput">
+          dateExp
+          <input
+
+            type="month"
+            v-model="dateExpInput"
+           
+            
+          />
+
+          <div>{{dateExpInputValid}}</div>
+          <div>{{age}}</div>    
+          <div v-if="dateExpInputValid">validation date </div>
+        </div>
+        <div>
+      
+          <input 
+            id="validation"
+            type="submit"
+
+          />
+        </div>
+      </form>
+
+
+        
+        
+       
+
+       
+      
+    </div>
+    
+  </body>
+</html>

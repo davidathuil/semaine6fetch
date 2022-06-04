@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>tO DO LIST</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+
+    <!-- Script -->
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+    
+    
+  </head>
+
+  <body>
+    <!-- Point de montage-->
+    <div id="root">
+      
+        
+     
+
+      <div class="edit-inputs">
+    
+          <label for="todoinput">TO DO</label>
+          <input
+            id="todoinput"
+            name="todoinput"
+            @input="changeText"
+            @keyup.enter="addtodo"
+            
+            class="todoinput"
+            :value="todoinput"
+          />
+        </div>
+        <div v-if="todoinput==''"></div>
+        <div v-else>{{todoinput}}</div>
+      
+        
+          <!-- <div v-for="(todo,index) in todolist" :key="todo.id" class="todoitem">{{todo}}
+          <div>
+            <button @click="MEncours" :data-index="index">Encours moove</button>  
+            <button @click="Mtermine" :data-index="index">Termine moove</button>
+            <div class="removeitems" @click="removeitems" :data-index="index">&times;</div>  
+          </div>
+        </div>  
+         -->
+      
+        <div class="action">
+          <p>Action</p>
+          
+          <div class="lists">
+            <div><button @click="Encours=!Encours">Encours1</button>
+              <div class="Encours" :class="{cache:!Encours}">
+                <div v-for="(todo,index) in encourlist" :key="todo.id" class="todoaction">
+                {{todo}}
+                <div>
+                  <i class="icon-camera-retro icon-large" @click="MEncours" :data-index="index" data-list="encourlist"></i>
+                  <i class="icon-flag pull-left icon-border" @click="Mtermine" :data-index="index" data-list="encourlist">Termine moove</i>
+                  <div class="removeitems" @click="removeitems" :data-index="index" data-list="encourlist">&times;</div>  
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div><button @click="Afaire=!Afaire">Afaire</button>
+              <div class="Afaire" :class="{cache:!Afaire}">
+                <div v-for="(todo,index) in todolist" :key="todo.id" class="todoitem">{{todo}}
+                  <div>
+                    <i class="icon-camera-retro icon-large" @click="MEncours" :data-index="index" data-list="todolist"></i>
+                    <i class="icon-flag pull-left icon-border" @click="Mtermine" :data-index="index" data-list="todolist">Termine moove</i>
+                    <div class="removeitems" @click="removeitems" :data-index="index" data-list="todolist">&times;</div>  
+                </div>
+              </div>
+              </div> 
+            </div>  
+            <div>
+              <button @click="termine=!termine">termine</button>
+              <div class="termine" :class="{cache:!termine}">
+                <div v-for="(todo,index) in terminelist" :key="todo.id" class="todoaction">
+                 {{todo}}
+                 
+                 <div>
+                  <i class="icon-camera-retro icon-large" @click="MEncours" :data-index="index" data-list="terminelist"></i>
+                  <i class="icon-flag pull-left icon-border" @click="Mtermine" :data-index="index" data-list="terminelist">Termine moove</i>
+                  <div class="removeitems" @click="removeitems" :data-index="index" data-list="terminelist">&times;</div>  
+                  </div>
+                </div> 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+    </div>
+    
+  </body>
+</html>

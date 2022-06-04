@@ -1,0 +1,51 @@
+/* Style général */
+.todoinput{
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.edit-inputs{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  gap:30px;
+  align-content: space-between;
+  
+}
+.FondBleu{
+  display: flex;
+  width: 60vw;
+  height: 30vh;
+  background-color: rgb(18, 131, 223);
+  color:white;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 3vh;
+}
+.Content{
+  width: 25vw;
+}
+.Boutton{
+  background-color: white;
+  Color:rgb(18, 131, 223);
+  font-weight: bold;
+}
+
+.Menu{
+  display: flex;
+  background-color: rgb(18, 131, 223);
+  color:white;
+  justify-content: space-between;
+}
+.Footer{
+  display: flex;
+  background-color: rgb(18, 131, 223);
+  color:white;
+  flex-direction: column;
+
+}
+

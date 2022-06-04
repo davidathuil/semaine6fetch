@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulaire inscription</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@vuepic/vue-datepicker@latest/dist/main.css">
+
+
+    <!-- Script -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+
+
+
+  
+  <body>
+    <!-- Point de montage-->
+    <div id="root">
+      
+        
+      
+
+      <div class="edit-inputs">
+        <form id="inscription">
+        <div class="login">
+
+          <label for="login">login</label>
+          <input
+            id="login"
+            name="login"
+            @input="changeText"
+            @keyup.shift.enter="shiftcount"
+            class="login"
+            :value="login"
+            
+          />
+          <div v-if="login.length >=8 && login.length <=16">login OK <br> Nbre de caractères compris<br> entre
+             8 et 16</div>
+          <div v-else-if="login.length <8">Manque nbr de caracte en dessus 8</div>
+          <div v-else-if="login.length >16">au dessus 16</div> 
+          <div>{{login.length}}</div>
+          <div>{{Nbrlogin}}</div>
+        </div>  
+        <div class="password">
+          <label for="password">password</label>
+          <input
+            id="password"
+            name="password"
+            @input="changeText"
+            @keyup.a="shiftcount"
+            class="password"
+            :value="password"
+            
+          />
+          <div v-if="password.length >=8 ">Password ok minimum 8 caractères </div>
+          <div>{{password.length}}</div>
+        </div>
+
+        <div class="birthdate">
+          <label for="birthdate">birthdate</label>
+          <input
+            id="birthdate"
+            type="date"
+            name="birthdate"
+            @input="changeText"
+            @keyup.a="shiftcount"
+            class="birthdate"
+            :value="birthdate"
+            
+          />
+
+          <div>{{age}}</div>    
+          <div v-if="age >=18 ">au dessus 18 </div>
+        </div>
+        </div>
+        <div v-if="login.length >=8 && login.length <=16 && age >=18 && password.length >=8" >
+          <input 
+            id="validation"
+            type="submit"
+          />
+        </div>
+      </form>
+<h1 v-if="counter >=10 " class="count">{{counter}} Bienvenue à toi developpeur tu as decouvert le code secret </h1>
+
+        
+        
+ 
+        
+        
+       
+
+       
+      
+    </div>
+    
+  </body>
+</html>

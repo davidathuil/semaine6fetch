@@ -1,0 +1,72 @@
+/* Style général */
+
+.card {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.todoinput{
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.edit-inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.todoitem{
+  width: 20vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  /* justify-items: center; */
+  justify-content:space-around;
+  margin: auto;
+
+}
+.todoaction{
+  justify-content:space-around;
+  padding: 10px;
+
+
+}
+
+.Encours{
+  width: 25vw;
+  min-height: 300px;
+  border:solid red;
+}
+.Afaire{
+  width: 25vw;
+  min-height: 300px;
+  border:solid green;
+}
+
+.termine{
+  width: 25vw;
+  min-height: 300px;
+  border:solid blue;
+}
+.lists{
+  display: flex;
+}
+
+.cache{
+  visibility:hidden;
+}
+
+.action{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}

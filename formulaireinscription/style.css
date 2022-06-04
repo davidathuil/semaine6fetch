@@ -1,0 +1,56 @@
+/* Style général */
+.todoinput{
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.edit-inputs{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  gap:30px;
+  align-content: space-between;
+  
+}
+
+label
+{
+	display: block;
+	width: 70px;
+	float: left;
+  margin-top : 15px;
+
+}
+#inscription{gap:50px;
+  
+
+}
+
+input {
+  margin-top : 15px;
+}
+
+.birthdate{
+  justify-content: left;
+  display: flex;
+  gap:30px;
+}
+.password{
+  justify-content: left;
+  display: flex;
+  gap:30px;
+}
+.login{
+  justify-content: left;
+  display: flex;
+  justify-items: center;
+  align-items:flex-start;
+  gap:30px;
+  
+}
+.count{
+  background-color: red;
+  width: 300px;
+}
